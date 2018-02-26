@@ -1,12 +1,12 @@
 /**
- * DepositoCombustible es una clase que representa el dep√≥sito de gasolina de un coche
- * Un objeto DepositoCombustible agrupa la informaci√≥n necesaria para describir el estado del dep√≥sito:
+ * DepositoCombustible es una clase que representa el depÛsito de gasolina de un coche
+ * Un objeto DepositoCombustible agrupa la informaciÛn necesaria para describir el estado del depÛsito:
  * <ul>
- *   <li> depMax   capacidad del dep√≥sito
- *   <li> depNivel	nivel de gasolina del dep√≥sito
+ *   <li> depMax   capacidad del depÛsito
+ *   <li> depNivel	nivel de gasolina del depÛsito
  * </ul>
  * 
- * class invariante 		0.0 &lt;= depNivel &lt;= depMax
+ * class invariante 		0.0 <= depNivel <= depMax
  * 
  * @author IES Seveero Ochoa Team
  * @version 1.0
@@ -21,12 +21,12 @@ public class DepositoCombustible {
 	* DepositoCombustible es el constructor de la clase. 
 	* 
 	* <hr>
-	* <br> precondici√≥n  depMax &gt; 0.0 and 0.0 &lt;= depNivel &lt;= getTankMax()  
-	* <br> postcondici√≥n depMax &gt; 0.0 and 0.0 &lt;= depNivel &lt;= getTankMax() 
+	* <br> precondiciÛn  depMax > 0.0 and 0.0 <= depNivel <= getTankMax()  
+	* <br> postcondiciÛn depMax > 0.0 and 0.0 <= depNivel <= getTankMax() 
 	* <hr>
 	* 
-	* @param tankMax  es la cantidad de combustible (medida en litros) que cabe en el dep√≥sito
-	* @param tankLevel es la cantidad de combustible (medida en litros) que contiene el dep√≥sito inicialmente
+	* @param tankMax  es la cantidad de combustible (medida en litros) que cabe en el depÛsito
+	* @param tankLevel es la cantidad de combustible (medida en litros) que contiene el depÛsito inicialmente
 	* 
 	*/ 
 	DepositoCombustible(double tankMax, double tankLevel) {
@@ -35,27 +35,27 @@ public class DepositoCombustible {
     }
 
    /**
-    * getDepositoNivel es un m√©todo para obtener informaci√≥n
+    * getDepositoNivel es un mÈtodo para obtener informaciÛn
     * 
-    * @return	la cantidad de combustible en el dep√≥sito
+    * @return	la cantidad de combustible en el depÛsito
     */
     public double getDepositoNivel(){
        return depNivel;
     }
 
    /**
-    * getDepositoMax es un m√©todo para obtener informaci√≥n
+    * getDepositoMax es un mÈtodo para obtener informaciÛn
     * 
-    * @return	la capacidad (en litros) del dep√≥sito
+    * @return	la capacidad (en litros) del depÛsito
 	*/
 	public double getDepositoMax(){
        return depMax;
     }
 
    /**
-	* estaVacio da informaci√≥n del estado 
+	* estaVacio da informaciÛn del estado 
 	* 
-	* @return 	<code>true</code> si el dep√≥sito est√° vacio 
+	* @return 	<code>true</code> si el depÛsito est· vacio 
     *          <code>false</code> en otro caso.
 	*/
     public boolean estaVacio(){
@@ -63,9 +63,9 @@ public class DepositoCombustible {
     }
 
     /**
-	 * estaLleno informaci√≥n del estado 
+	 * estaLleno informaciÛn del estado 
 	 * 
-	 * @return 	<code>true</code> si el dep√≥sito est√° lleno 
+	 * @return 	<code>true</code> si el depÛsito est· lleno 
      *          <code>false</code> en otro caso.
 	 */
     public boolean estaLleno(){
@@ -73,15 +73,15 @@ public class DepositoCombustible {
     }
 
    /**
-	* llenar es un m√©todo que efect√∫a cambios a√±adiendo combustible al dep√≥sito
+	* llenar es un mÈtodo que efect√∫a cambios aÒadiendo combustible al depÛsito
 	* 
 	* <hr>
-	* <br> precondicion 	0.0 &lt; amount &lt;= getDepositoMax() - getDepositoNivel() 
+	* <br> precondicion 	0.0 < amount <= getDepositoMax() - getDepositoNivel() 
 	* <br> postcondicion 	no vacio
-	* <br> postcondicion  	depNivel &gt; depNivel_inicial 
+	* <br> postcondicion  	depNivel > depNivel_inicial 
 	* <hr>
 	* 
-	* @param amount 	Cantidad de combustible que a√±ade
+	* @param amount 	Cantidad de combustible que aÒade
 	* 
 	*/
     public void fill(double amount){
@@ -89,7 +89,7 @@ public class DepositoCombustible {
     }
 
    /**
-	* consumir es un m√©todo que efectua cambios reduciendo el combustible del dep√≥sito
+	* consumir es un mÈtodo que efectua cambios reduciendo el combustible del depÛsito
 	* 
     * @param amount cantidad de fuel consumida
     * 
